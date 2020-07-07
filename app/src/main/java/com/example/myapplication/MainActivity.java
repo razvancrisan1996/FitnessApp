@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnExercises, btnSetting, btnCalendar;
+    ImageView btnTraining;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -18,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         btnExercises = (Button) findViewById(R.id.btnExercises);
         btnSetting = (Button) findViewById(R.id.btnSetting);
+        btnTraining = (ImageView) findViewById(R.id.btnTraining);
+
+        btnTraining.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Daily_Training.class);
+                startActivity(intent);
+            }
+        });
 
         btnSetting.setOnClickListener(new View.OnClickListener(){
             @Override

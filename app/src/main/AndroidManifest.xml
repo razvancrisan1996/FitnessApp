@@ -13,8 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingPage"></activity>
+        <activity android:name=".Daily_Training"></activity>
+        <activity android:name=".SettingPage" />
         <activity android:name=".ViewExercise" />
+
+        <receiver android:name=".AlarmNotificationReceiver" />
+
         <activity android:name=".ListExercises" />
         <activity android:name=".MainActivity">
             <intent-filter>
