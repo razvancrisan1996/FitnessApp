@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnExercises = (Button) findViewById(R.id.btnExercises);
         btnSetting = (Button) findViewById(R.id.btnSetting);
         btnTraining = (ImageView) findViewById(R.id.btnTraining);
+        btnCalendar = (Button) findViewById(R.id.btnCalendar);
 
         btnTraining.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +30,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        btnCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Calendar.class);
+                startActivity(intent);
+            }
+        });
         btnSetting.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
